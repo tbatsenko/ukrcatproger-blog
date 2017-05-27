@@ -1,0 +1,195 @@
+{% extends 'blog/base.html' %}
+  {% block content %}
+<!-- Header -->
+<a name="about"></a>
+<div class="intro-header">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <ul class="list-inline intro-social-buttons">
+                        <li>
+                            <a href="https://www.facebook.com/ukrcatholicprogrammer/" class="btn intro-btn btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name intro-btn">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tbatsenko" class="btn intro-btn btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name intro-btn">Github</span></a>
+                        </li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                    <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+
+<!-- Page Content -->
+<a name="quotes"></a>
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+                <div id="Carousel" class="carousel slide">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carousel" data-slide-to="1"></li>
+                    <li data-target="#Carousel" data-slide-to="2"></li>
+                    <li data-target="#Carousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+
+                <div class="item active container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 img-responsive img-quote">
+                            <img class="img-responsive img-quote" src="http://pbookcrazy.com/wp-content/uploads/2014/06/sheldon.jpg" alt="Door">
+                        </div>
+                        <div class="col-md-8">
+                            <p class="text-center quote">
+                            Стукайте у двері й вам відкриють!</p>
+                            <p class="text-right autor">(c) народна мудрість </p>
+                        </div>
+                    </div><!--.row-->
+
+
+                </div><!--.item-->
+
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-12"><h1 class="text-center quote side-padding">"Я хочу рости разом із вашою компанією" - та фраза, яку хочуть чути роботодавці.</h1></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+
+                <div class="item">
+                  <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center quote side-padding">
+                            Ви будете робити багато помилок, всім буде боляче і так буде до кінця життя, АЛЕ потрібно навчитись правильно рефлексувати.
+                            </h1>
+                        </div>
+                    </div><!--.row-->
+                </div><!--.item-->
+                <div class="item">
+                  <div class="row">
+                        <div class="col-md-12"><h1 class="text-center quote side-padding">Write beautiful code.</h1></div>
+                    </div><!--.row-->
+                </div><!--.item-->
+
+                </div><!--.carousel-inner-->
+                  <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                  <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+
+    </div>
+  </div>
+</div>
+
+
+<a name="memories"></a>
+<div class="memories-section">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h2 class="text-center mg-top">Memories book</h2>
+                <p class="lead">I've decided to create a book...</p>
+            </div>
+        </div>
+
+
+        <div class="text-center">
+
+          <div class="row mySlides story-box">
+            <div class="col-md-6 story-box left-page">
+              <div class="text-center">
+                  <p class="special-quote">На самому початку навчання до нас завітали сенатори Програми компютерних наук УКУ, щоб поділитися наступним:</p>
+                  {% for post in posts %}
+                  <div class="post">
+                    <p><<a href="{% url 'post_detail' pk=post.pk %}"><span class="special-quote">{{ post.title }}</span></a> <i class="date">{{ post.published_date }}</i></p>
+                    <!-- <p>{{ post.text|linebreaksbr }}</p> -->
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="col-md-6 story-box right-page">
+                      <h2 class="story_title">Поради для першокурсників</h2>
+
+                  </p>
+              </div>
+            </div>
+            </div>    <!--.row-->
+
+
+            <div class="row mySlides">
+                <div class="col-md-6 story-box left-page">
+                    <div class="text-center">
+                        <p class="special-quote">На самому початку навчання до нас завітали сенатори Програми компютерних наук УКУ, щоб поділитися наступним:</p>
+                        <ul class="story-ul row">
+                            <div class="col-md-6">
+                                <li><p class="story-li">Отримуйте знання</p> <p class="story-li"></p></li>
+                                <li><p class="story-li">Будуйте свій світогляд</p></li>
+                                <li><p class="story-li">Розвивайте коммунікаційні та лідерські якості</p></li>
+                                <li><p class="story-li">Будьте глобальними</p></li>
+                                <li><p class="story-li">Шанси упускати не можна, але будьте підготовленими</p></li>
+                                <li><p class="story-li">Працюйте над своїми сильними сторонами</p></li>
+                                <li><p class="story-li">Завжди шукайте собі компанію</p></li>
+                                <li><p class="story-li">Будьте щирими з тими, хто поруч</p></li>
+                                <li><p class="story-li">Лише найщиріші бажання стають реальністю</p></li>
+                            </div>
+                            <div class="col-md-6">
+                                <li><p class="story-li">Відкривайте для себе світ</p></li>
+                                <li><p class="story-li">Не бійтеся робити помилки</p></li>
+                                <li><p class="story-li">Стукайте у всі двері</p></li>
+                                <li><p class="story-li">Цінність людини вимірюється у її досвіді</p></li>
+                                <li><p class="story-li">Слухайте мудрих людей, коли приймаєте важливі рішення</p></li>
+                                <li><p class="story-li">Візія, розуміння того, куди рухатись, сила волі - характеристики лідера</p></li>
+                                <li><p class="story-li">Будьте глобальними</p></li>
+                                <li><p class="story-li">Витрачайте час на корисне, пізнавайте світ, пізнавайте себе"</p></li>
+                            </div>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-6 story-box right-page">
+                            <h2 class="story_title">Поради для першокурсників</h2>
+                            <img class="img-responsive story-img" src="../../static/img/utkin.jpg" alt="Utkin">
+                            <h3 class="story-autor"> Taрac Кицмей та Євген Уткін</h3>
+
+
+                        </p>
+                        </div>
+                    </div>    <!--.row-->
+
+
+        </div>
+
+
+        <div class="text-center">
+          <div class="row">
+            <br>
+            <button class="num-btn" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="num-btn" onclick="plusDivs(1)">Next ❯</button>
+            <br>
+          </div>
+          <button class="num-btn demo num-orange" onclick="currentDiv(1)">1</button>
+          {% for post in posts %}
+            <button class="num-btn demo" onclick="currentDiv(2)">{{ forloop.counter }}</button>
+
+          {% endfor %}
+        </div>
+
+
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="post row mySlides story-box">
+  <div class="col-md-6 story-box left-page">
+    <div class="text-center">
+        <p class="special-quote">{{ post.text|linebreaksbr }}</p>
+    </div>
+  </div>
+  <div class="col-md-6 story-box right-page">
+    <h2 class="story_title">{{ post.title }}</h2>
+    <div class="container">
+      {% if post.published_date %}
+      <div class="date">
+        {{ post.published_date }}
+      </div>
+      {% else %}
+      <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+      {% else %}
+      <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+      {% endif %}
+      <img src="{{post.image}}" alt="">
+      <p>{{post.image_description}}</p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

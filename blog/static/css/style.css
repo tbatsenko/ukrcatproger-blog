@@ -1,0 +1,343 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Comfortaa","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.mg-top {
+    margin-top: 30px;
+}
+.topnav {
+    font-size: 14px;
+    border: none;
+    background: #fe5300;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    duration: 1s;
+    color: white;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    duration: 1s;
+    color: white;
+}
+
+
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    height: 100%;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+
+
+.intro-divider {
+    width: 400px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-btn{
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 20%;
+    color: white;
+
+}
+.intro-btn :hover{
+    color: orange;
+}
+
+
+a:hover {
+    color: orange;
+    text-decoration: none;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    duration: 1s;
+}
+.img-quote {
+    max-height: 300px;
+    margin-top: -10px;
+    border-radius: 50%;
+    padding: 20px;
+    padding-left: 30px;
+
+}
+
+.side-padding{
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.quote {
+    margin-top: 80px;
+
+    vertical-align: middle;
+    font-family: Comfortaa;
+    color: rgb(61, 61, 61);
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 3.5vh;
+
+}
+
+.autor {
+    font-family: Comfortaa;
+    color: rgb(61, 61, 61);
+    font-weight: 400;
+    font-size: 2.8vh;
+    padding-right: 20vh;
+
+}
+.carousel {
+    height: 300px;
+    margin: 30px;
+    padding: 20px 20px 30px 20px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+/* The controlsy */
+.carousel-control {
+	left: -12px;
+    height: 40px;
+	width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 130px;
+}
+
+.num-orange{
+    background-color: orange !important;
+}
+
+.num-btn {
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    outline: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    background: rgba(69, 168, 203, 0);
+    text-decoration: none!important;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.num-btn:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    duration: 1s;
+}
+.story {
+    font-size: 14px;
+    font-family: sans-serif;
+
+}
+.story-box {
+    min-height: 550px;
+    max-height: 550px !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Параметры тени */
+
+}
+.left-page {
+    padding: 40px 20px 40px 40px;
+}
+.right-page {
+    padding: 40px 40px 40px 20px;
+}
+.story-ul {
+    color: orange;
+    list-style-image: url("../img/light-bulb-icon.png");
+}
+
+.story-li {
+    color: rgb(78, 78, 78);
+    text-align: -webkit-auto;
+    font-family: Verdana;
+    font-weight: 300;
+}
+.story-li:before{
+   display: inline-block;
+   height: 5px;
+   width: 5px;
+
+}
+
+.special-quote {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+
+}
+
+.story_title {
+    border-bottom: 2px solid orange;
+    width: auto;
+    margin-left: 49%;
+    text-align: -webkit-center;
+    font-family: Comfortaa;
+}
+.story-autor {
+    font-size: 16px;
+    color: rgb(93, 93, 93);
+    font-family: Comfortaa;
+    padding: 20px;
+}
+.inner-shadow{
+    box-shadow: inset 0px 0px 5px 5px rgba(245,245,245,1);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mySlides {display:none}
+
+.left-s {
+    margin-left: 0px;
+}
+
+.carousel-control.right {
+	right: -12px;
+}
+/* The indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 10px;
+	margin-right: -19px;
+}
+/* The colour of the indicators */
+.carousel-indicators li {
+	background: #cecece;
+}
+.carousel-indicators .active {
+background: rgb(233, 98, 0);
+}
+
+.contact-section {
+    background-color: #f8f8f8;
+}
+
+.memories-section {
+
+    height: 95%;
+}
+
+
+@media(max-width:767px) {
+    .intro-header {
+        background: url(../img/bg-mobile.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+
+    .img-quote {
+        display: none;
+    }
+
+    .quote {
+        margin: auto;
+        margin-top: 50px;
+        line-height: 5vh;
+        font-size: 16px;
+        font-size: 2.8vh;
+
+    }
+
+    .autor {
+        margin-top: 0px;
+        font-family: Comfortaa;
+        color: rgb(61, 61, 61);
+        font-weight: 400;
+        font-size: 2.1vh;
+        padding-right: 0px;
+    }
+
+}
+
+@media(max-width:1199px) {
+.quote {
+    margin: auto;
+    line-height: 5vh;
+    font-size: 16px;
+    font-size: 2.8vh;
+
+}
+
+.autor {
+    margin-top: 0px;
+    font-family: Comfortaa;
+    color: rgb(61, 61, 61);
+    font-weight: 400;
+    font-size: 2.1vh;
+    padding-right: 0px;
+}
+}
+
+
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
